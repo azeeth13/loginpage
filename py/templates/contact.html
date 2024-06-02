@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %} Contact page {% endblock %}
+{% block content %}
+
+<div class="contact">
+  <h1>Malumot qo'shish</h1>
+<form method="POST">
+  {% csrf_token %}
+  <Label>Ism:</Label>
+  <input type="text" name="ism" placeholder="Ismingizni kiriting:  " id=""><br><br>
+  <label for="">Familya:</label>
+  <input type="text" name="familya" placeholder="Familyangizni kiriting" id=""><br><br>
+  <label for="">Yosh</label>
+  <input type="number" name="yosh" placeholder="Yosh kiriting:  " id=""><br><br>
+  <label for="">Email</label>
+  <input type="email" name="email" placeholder="Email kiritng:  " id=""><br><br>
+  <input type="submit" value="Yuborish">
+</form>
+
+</div>
+
+{% endblock %}
